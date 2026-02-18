@@ -231,10 +231,3 @@ stories/
 ├── Toast.stories.tsx
 └── Sidebar.stories.tsx
 ```
-
-```
-
----
-
-
-```
