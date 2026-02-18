@@ -236,37 +236,5 @@ stories/
 
 ---
 
-##  📁 Full File Structure
-
-```
-
-.storybook/
-├── main.ts ← Storybook build config — uses @storybook/nextjs, points to stories/
-└── preview.ts ← Imports globals.css so Tailwind classes work inside Storybook
-
-app/
-└── globals.css ← Contains @tailwind base/components/utilities — imported by preview.ts
-
-components/
-├── Input/Input.tsx
-├── Toast/Toast.tsx
-└── Sidebar/Sidebar.tsx
-
-stories/
-├── Input/Input.stories.tsx
-├── Feedback/Toast.stories.tsx
-└── Navigation/Sidebar.stories.tsx
-
-public/
-├── pas1.png ← Input screenshot (focused)
-├── pas2.png ← Input screenshot (default)
-├── toast1.png ← Toast success screenshot
-├── toast2.png ← Toast info with close button
-├── side.png ← Sidebar closed screenshot
-└── side1.png ← Sidebar open screenshot
-
-tailwind.config.ts ← content[] must include components/** and stories/** so Tailwind scans them
-
-```
 
 ```
