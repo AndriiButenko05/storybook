@@ -236,16 +236,16 @@ stories/
 
 ---
 
-## 📁 Full File Structure
+##  📁 Full File Structure
 
 ```
 
 .storybook/
-├── main.ts  
-└── preview.ts
+├── main.ts ← Storybook build config — uses @storybook/nextjs, points to stories/
+└── preview.ts ← Imports globals.css so Tailwind classes work inside Storybook
 
 app/
-└── globals.css
+└── globals.css ← Contains @tailwind base/components/utilities — imported by preview.ts
 
 components/
 ├── Input/Input.tsx
@@ -253,9 +253,9 @@ components/
 └── Sidebar/Sidebar.tsx
 
 stories/
-├── Input.stories.tsx
-├── Toast.stories.tsx
-└── Sidebar.stories.tsx
+├── Input/Input.stories.tsx
+├── Feedback/Toast.stories.tsx
+└── Navigation/Sidebar.stories.tsx
 
 public/
 ├── pas1.png ← Input screenshot (focused)
